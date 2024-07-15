@@ -1,16 +1,15 @@
 * {
-  padding: 0;
   margin: 0;
 }
 
-p {
+p,a {
   font-size: 20px;
 }
 
 header {
   background-color: rgb(244, 79, 79);
   text-align: center;
-  margin: 0 0 10px 0;
+  margin-bottom: 20px;
 }
 
 h1 {
@@ -18,7 +17,7 @@ h1 {
 }
 
 main {
-  margin: 10px;
+  padding: 10px;
 }
 
 #parent {
@@ -29,35 +28,24 @@ main {
 .contents {
   text-align: center;
   flex-basis: 25%;
-  padding: 20px 0;
-  margin: 10px 15px;
+  margin: 20px 0px;
+  padding: 10px 15px;
   border: 3px solid rgb(238, 204, 204)
 }
 
 h2 {
   font-size: 25px;
   border-bottom: dotted 3px rgb(236, 122, 122);
-  padding-bottom: 5px;
-  position: relative;
-  display: inline-block;
+  margin: 20px;
 }
 
-h2 ::before {
+h2::before {
 content: "⚫︎";
 color: rgb(239, 111, 139);
 position: relative;
-left: -20px; /* 適宜調整 */
 }
 
-h2::after {
-  content: '';
-  display: inline-block;
-  width: 10px;
-  border-top: dotted 3px rgb(236, 122, 122);
-  margin: 5px 0;
-}
-
-p .highlight {
+p:nth-of-type(2n)::first-letter {
   color: rgb(97, 206, 249);
 }
 
@@ -77,8 +65,16 @@ a:visited {color:rgb(193, 234, 251);} /*訪問済みのリンクの色*/
 a:hover {color:rgb(245, 178, 168);} /*カーソルが乗っているリンクの色*/
 
 @media screen and(max-width:768px) {
-  #parent {
-      display: flex;
-      flex-direction: column; 
-    }
+  h2 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 25px;
+  }
+
+  div {
+    display: block;
+  }
+
 }
