@@ -65,6 +65,11 @@ a:visited {color:rgb(193, 234, 251);} /*訪問済みのリンクの色*/
 a:hover {color:rgb(245, 178, 168);} /*カーソルが乗っているリンクの色*/
 
 @media screen and(max-width:768px) {
+
+  * {
+    margin: 0;
+  }
+
   h2 {
     font-size: 30px;
   }
@@ -75,6 +80,7 @@ a:hover {color:rgb(245, 178, 168);} /*カーソルが乗っているリンクの
 
   div {
     display: block;
+    flex-direction: column;
   }
 
 }
