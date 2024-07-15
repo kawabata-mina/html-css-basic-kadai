@@ -47,6 +47,7 @@ position: relative;
 
 p:nth-of-type(2n)::first-letter {
   color: rgb(97, 206, 249);
+  font-weight: bold;
 }
 
 .contents img {
