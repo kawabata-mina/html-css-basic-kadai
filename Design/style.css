@@ -19,7 +19,8 @@ PC用スタイル
 
 /* ヘッダー */
 header {
-  width: 1080px;
+  width: 100%;
+  max-width: 1080px;
   display: flex;
   padding: 20px;
   margin: 0 auto;
@@ -97,6 +98,7 @@ h2 {
 }
 
 .aboutbox {
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -143,21 +145,18 @@ SP用スタイル
 =============*/
 
 @media screen and (max-width: 767px) {
-  body {
-    min-width: 375px;
-    margin: 0;
-  }
 
 /* ヘッダー */
 header {
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   display: flex;
 }
 
 /* メインビジュアル */
 #main-visual {
-  position: relative;
-  width: 550px;
+  width: 100%;
 }
 
 #myprofile {
@@ -174,24 +173,31 @@ header {
 }
 
 /* ABOUT */
-.aboutbox {
-  margin: 0 auto;
-  text-align: center;
+#about {
+  width: 90%;
 }
 
 #about img {
-  position: absolute;
-  margin-left: 20px;
+  width: 30%;
+}
+
+.aboutbox > div {
+  width: 65%;
 }
 
 /* WORKS */
 .worksbox {
-  display: block;
-  margin: 0 auto;
+  width: 90%;
+  flex-wrap: wrap;
+}
+
+.worksbox div {
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .worksbox div > img {
-  width: 100%;
+  margin-bottom: 10px;
 }
 
 }
