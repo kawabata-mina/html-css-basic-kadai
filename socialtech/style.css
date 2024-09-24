@@ -1,117 +1,205 @@
-/* PC、スマホ共通スタイル */
+/* PC・スマホ共通スタイル */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
-  }
+  font-family: "Noto Sans Japanese", Meiryo, Arial, sans-serif;
+  overflow-x: hidden;
+}
 
 p {
-  font-size: 15px;
+  font-size: 18px;
 }
 
-/* ==============
-PC用のスタイル
-============== */
-
-/* 横幅設定*/
-body {
-  max-width: 1080px;
-  min-width: 960px;
-  margin: 0 auto 0 auto;
-}
+/*=============
+PC用スタイル
+=============*/
 
 /* ヘッダー */
 header {
+  width: 100%;
+  max-width: 1080px;
   display: flex;
+  padding: 20px;
+  margin: 0 auto;
+  align-items: center;
   justify-content: space-between;
 }
 
-/* ナビゲーションのレイアウト */
-#nav-pc {
-  font-size: 14p;
-  padding-top: 15px;
+#myprofile {
+  font-size: 34px;
+  text-align: left;
+  border: solid 1px #000000 ;
+  display: inline-block;
+  padding: 15px 35px;
 }
 
-/* ナビゲーションのリンク装飾設定 */
+#nav-pc {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+#nav-pc > a:first-child {
+  margin-right: 30px;
+}
+
 #nav-pc > a {
+  color: #000000;
   text-decoration: none;
-  margin-left: 20px;
 }
 
 #nav-pc > a:link {
-  color: #0d0d0d;
+  color: #000000;
 }
 
-#nav-pc > a:visited {
-  color: #0d0d0d;
-}
-
-#nav-pc > a:hover {
-  color: #0d0d0d;
+#nac-pc > a:visited {
+  color: #000000;
 }
 
 #nav-pc > a:active {
-  color: #0d0d0d;
+  color: #000000;
+  text-decoration: underline;
+}
+
+#nav-pc > a:hover {
+  color: #000000;
+}
+
+/* メイン */
+#main-visual {
+  width: 100%;
+}
+
+#main-visual > img {
+  width: 100%;
+}
+
+/* 共通 */
+.box {
+  margin: 60px auto 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 50px;
+}
+
+/* About */
+#about {
+  width: 700px;
+}
+
+.aboutbox > img {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.aboutbox {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-name {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.aboutbox ul {
+  list-style: inside;
+}
+
+/* Works */
+.worksbox {
+  width: 700px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.worksbox > div {
+  width: 30%;
+}
+
+.worksbox div > img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.worksbox div > p {
+  text-align: center;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  margin: 100px auto 50px auto;
+}
+
+/*=============
+SP用スタイル
+=============*/
+
+@media screen and (max-width: 767px) {
+
+/* ヘッダー */
+header {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
 }
 
 /* メインビジュアル */
 #main-visual {
-  position: relative;
-  height: 400px;
-}
-
-#main-messeage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #2710d5;
-  color: #ffffff;
-  border-radius: 0 0 476px 0;
-  max-width: 620px;
-  height: 100%;
-  width: 100%;
-  z-index: 11;
-}
-
-#main-messeage > h1 {
-  font-size: 60px;
-  font-weight: bold;
-  margin: 100px 0 0 50px;
-}
-
-#main-messeage >p {
-  font-size: 28px;
-  margin: 0 0 0 50px;
-}
-
-#main-visual > img {
-  max-width: 620px;
-  border-radius: 476px 0 0 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 10;
-}
-
-/* 見出し */
-h2 {
-  margin: 40px 0 0 0;
-}
-
-h2::after {
-  content: url("images/line.png");
-  margin-left: 10px;
-}
-
-h3 {
-  font-size: 27px;
-}
-
-/* ミッション */
-#mission {
-  margin: 80px auto 80px auto;
   width: 100%;
 }
 
-#mission-flex {
+#myprofile {
+  font-size: 20px;
+  padding: 10px 20px;
+}
+
+#nav-pc {
+  font-size: 20px;
+}
+
+#nav-pc > a:first-child {
+  margin-right: 10px;
+}
+
+/* ABOUT */
+#about {
+  width: 90%;
+}
+
+#about img {
+  width: 30%;
+}
+
+.aboutbox > div {
+  width: 65%;
+}
+
+/* WORKS */
+.worksbox {
+  width: 90%;
+  flex-wrap: wrap;
+}
+
+.worksbox div {
   width: 100%;
-  display: flex;
+  margin-bottom: 30px;
+}
+
+.worksbox div > img {
+  margin-bottom: 10px;
+}
+
 }
